@@ -1,0 +1,28 @@
+{
+  "name": "reciple-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npx rimraf ./modules && npx tsc",
+    "start": "npx reciple",
+    "build:start": "npm run build && npm run start",
+    "dev": "npx nodemon --watch src --ext ts,mts,cts --exec \"npm run build:start\" --signal SIGHUP"
+  },
+  "dependencies": {
+    "@iamtraction/google-translate": "^2.0.1",
+    "axios": "^1.4.0",
+    "canvacord": "^5.4.9",
+    "discord-giveaways": "^6.0.1",
+    "discord.js": "^14.11.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.2.0",
+    "openai": "^3.2.1",
+    "reciple": "^7.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "nodemon": "^2.0.22",
+    "rimraf": "^4.4.1",
+    "typescript": "^5.0.2"
+  }
+}
